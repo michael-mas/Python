@@ -157,11 +157,11 @@ class Asteroid(object):
         self.xv = self.xdir * random.randrange(1,3)
         self.yv = self.ydir * random.randrange(1,3)
 
-    # dessiner asteroides
+    # dessiner enemies
     def draw(self, win):
         win.blit(self.image, (self.x, self.y))
 
-#definir étoiles
+#definir bonus
 class Star(object):
     def __init__(self):
         self.img = star
