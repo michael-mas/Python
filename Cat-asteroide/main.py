@@ -132,7 +132,7 @@ class Bullet(object):
         if self.x < -50 or self.x > sw or self.y > sh or self.y < -50:
             return True
 
-#définir astéroides
+#définir enemies
 class Asteroid(object):
     def __init__(self, rank):
         self.rank = rank
