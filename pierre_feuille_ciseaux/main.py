@@ -117,7 +117,7 @@ pierre = Button(root, width=20, height=2, text="PIERRE",
               bg="#FF3E4D", fg="white", command=lambda: updateChoix("pierre")).grid(row=2, column=1)
 papier = Button(root, width=20, height=2, text="PAPIER",
                bg="#FAD02E", fg="white", command=lambda: updateChoix("papier")).grid(row=2, column=2)
-ciseaux = Button(root, width=20, height=2, text="Ciseaux",
+ciseaux = Button(root, width=20, height=2, text="CISEAUX",
                  bg="#0ABDE3", fg="white", command=lambda: updateChoix("ciseaux")).grid(row=2, column=3)
 
 root.mainloop()
