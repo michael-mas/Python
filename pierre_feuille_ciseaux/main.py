@@ -94,9 +94,9 @@ def updateChoix(x):
 
     # pour l'IA
     compChoix = choix[randint(0, 2)]
-    if compChoix == "pierre":
+    if iaChoix == "pierre":
         ia_label.configure(image=pierre_img_ia)
-    elif compChoix == "paper":
+    elif iaChoix == "paper":
         ia_label.configure(image=papier_img_ia)
     else:
         ia_label.configure(image=ciseaux_img_ia)
