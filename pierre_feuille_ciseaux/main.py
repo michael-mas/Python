@@ -93,7 +93,7 @@ choix = ["pierre", "papier", "ciseaux"]
 def updateChoix(x):
 
     # pour l'IA
-    compChoix = choix[randint(0, 2)] #méthode randint
+    iaChoix = choix[randint(0, 2)] #méthode randint
     if iaChoix == "pierre":
         ia_label.configure(image=pierre_img_ia)
     elif iaChoix == "paper":
