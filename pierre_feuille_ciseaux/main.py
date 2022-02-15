@@ -9,7 +9,7 @@ root.title("Pierre Papier Ciseaux !")
 root.configure(background="#d3c5d8")
 
 # images du jeu
-pierre_img = ImageTk.PhotoImage(Image.open("pierre.png"))
+pierre_img = ImageTk.PhotoImage(Image.open("pierre.png")) #méthode imageTK
 papier_img = ImageTk.PhotoImage(Image.open("papier.png"))
 ciseaux_img = ImageTk.PhotoImage(Image.open("ciseaux.png"))
 pierre_img_ia = ImageTk.PhotoImage(Image.open("pierre_aversaire.png"))
@@ -17,9 +17,9 @@ papier_img_ia = ImageTk.PhotoImage(Image.open("papier_adversaire.png"))
 ciseaux_img_ia = ImageTk.PhotoImage(Image.open("ciseaux_adversaire.png"))
 
 # insert les images
-joueur_label = Label(root, image=ciseaux_img, bg="#d3c5d8")
+joueur_label = Label(root, image=ciseaux_img, bg="#d3c5d8") #méthode label
 ia_label = Label(root, image=ciseaux_img_ia, bg="#d3c5d8")
-ia_label.grid(row=1, column=0)
+ia_label.grid(row=1, column=0) #méthode grid
 joueur_label.grid(row=1, column=4)
 
 
@@ -93,7 +93,7 @@ choix = ["pierre", "papier", "ciseaux"]
 def updateChoix(x):
 
     # pour l'IA
-    compChoix = choix[randint(0, 2)]
+    compChoix = choix[randint(0, 2)] #méthode randint
     if iaChoix == "pierre":
         ia_label.configure(image=pierre_img_ia)
     elif iaChoix == "paper":
@@ -110,14 +110,14 @@ def updateChoix(x):
     else:
         joueur_label.configure(image=ciseaux_img)
 
-    checkGagnant(x, compChoix)
+    checkGagnant(x, iaChoix)
 
 # bouttons
-pierre = Button(root, width=20, height=2, text="PIERRE",
+pierre = Button(root, width=20, height=2, text="PIERRE", #méthode Button (tkinter)
               bg="#FF3E4D", fg="white", command=lambda: updateChoix("pierre")).grid(row=2, column=1)
 papier = Button(root, width=20, height=2, text="PAPIER",
                bg="#FAD02E", fg="white", command=lambda: updateChoix("papier")).grid(row=2, column=2)
 ciseaux = Button(root, width=20, height=2, text="CISEAUX",
                  bg="#0ABDE3", fg="white", command=lambda: updateChoix("ciseaux")).grid(row=2, column=3)
 
-root.mainloop()
+root.mainloop() ##boucle while qui 'execute' tous les events
